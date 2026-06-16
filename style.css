@@ -549,30 +549,35 @@ body {
     overflow: hidden;
     background: var(--gold);
     padding: 13px 0;
+    width: 100%;
 }
 
 .marquee-track {
     display: flex;
     align-items: center;
-    gap: 0;
     width: max-content;
-    animation: marquee 22s linear infinite;
+    gap: 0;
+    /* Remove gap to avoid math misalignment */
+    animation: marquee 20s linear infinite;
 }
 
 .marquee-track span {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 0.85rem;
-    letter-spacing: .12em;
+    font-size: 1.05rem;
+    letter-spacing: .22em;
     text-transform: uppercase;
     color: var(--black);
-    padding: 0 1.2rem;
+    /* This padding handles all the spacing safely */
+    padding: 0 2rem;
+    flex-shrink: 0;
 }
 
 .marquee-dot {
     color: var(--red) !important;
     font-size: 0.6rem !important;
     padding: 0 !important;
+    flex-shrink: 0;
 }
 
 
@@ -617,6 +622,7 @@ body {
     text-transform: uppercase;
     color: var(--text);
 }
+
 
 .section-header {
     margin-bottom: 4rem;
