@@ -1143,7 +1143,10 @@ body.light-mode .hero-outline {
 }
 
 body.light-mode .hero::before {
-    opacity: 0.12;
+    opacity: 0.4;
+    background-image:
+        linear-gradient(#525252 1px, transparent 1px),
+        linear-gradient(90deg, #525252 1px, transparent 1px);
 }
 
 body.light-mode .marquee-wrap {
