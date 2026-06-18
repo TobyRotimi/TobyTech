@@ -292,6 +292,29 @@ body {
    BUTTONS
    ============================================= */
 
+.theme-toggle {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--elevated);
+    border: 1px solid var(--border);
+    color: var(--gold);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.theme-toogle i {
+    color: var(--gold-dim);
+}
+
 .btn-primary {
     display: inline-block;
     font-family: var(--font-body);
@@ -1083,6 +1106,56 @@ textarea {
     padding-top: 1.5rem;
     font-size: 0.78rem;
     color: var(--text-dim);
+}
+
+/* =============================================
+   LIGHT MODE
+   ============================================= */
+
+body.light-mode {
+    --black: #f2efe9;
+    --surface: #ebe8e2;
+    --elevated: #e0ddd7;
+    --border: #c8c4bc;
+    --border-warm: rgba(140, 100, 20, 0.3);
+
+    --gold: #8a6a1a;
+    --gold-light: #a07828;
+    --gold-dim: rgba(140, 100, 20, 0.12);
+    --gold-glow: rgba(140, 100, 20, 0.22);
+
+    --red: #9b2318;
+
+    --text: #111010;
+    --text-muted: #3a3530;
+    --text-dim: #7a7268;
+
+    --success: #2e7d52;
+}
+
+body.light-mode .nav {
+    background: rgba(242, 239, 233, 0.92);
+    border-bottom-color: var(--border);
+}
+
+body.light-mode .hero-outline {
+    -webkit-text-stroke-color: var(--gold);
+}
+
+body.light-mode .hero::before {
+    opacity: 0.12;
+}
+
+body.light-mode .marquee-wrap {
+    background: var(--gold);
+}
+
+body.light-mode .marquee-track span {
+    color: #f2efe9;
+}
+
+body.light-mode .marquee-track .dot {
+    color: var(--red);
 }
 
 
